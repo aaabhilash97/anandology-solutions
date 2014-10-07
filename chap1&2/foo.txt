@@ -1,15 +1,11 @@
-It must be emphasized that a type def declaration does not create anew type in any sense; it merely 
-adds a new name for some existing type. Nor are there any new semantics : variables declared this way have exactly 
-the same properties as variables whose declarations are spelled out explicitly. 
-In effect, typedef is like #define , except that since it is interpreted by 
-the compiler, it can cope with textual substitutions that are beyond the capabilities of thepreprocessor. For example,
-Write a GetNth() function that takes a linked list and an integer index and returns the data
-value stored in the node at that index position. GetNth() uses the C numbering convention
-that the first node is index 0, the second is index 1, ... and so on. So for the list {42, 13,
-666} GetNth() with index 1 should return 13. The index should be in the range [0..length-
-1]. If it is not, GetNth() should assert() fail (or you could implement some other error
-Write a GetNth() function that takes a linked list and an integer index and returns the data
-value stored in the node at that index position. GetNth() uses the C numbering convention
-that the first node is index 0, the second is index 1, ... and so on. So for the list {42, 13,
-666} GetNth() with index 1 should return 13. The index should be in the range [0..length-
-1]. If it is not, GetNth() should assert() fail (or you could implement some other error
+def word_frequency(words):
+    """Returns frequency of each word given a list of words.
+
+        >>> word_frequency(['a', 'b', 'a'])
+        {'a': 2, 'b': 1}
+    """
+    frequency = {}
+    for w in words:
+        frequency[w] = frequency.get(w, 0) + 1
+    return frequency    
+#define
