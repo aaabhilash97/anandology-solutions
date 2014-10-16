@@ -1,0 +1,1714 @@
+CTYPE html>
+<!-- saved from url=(0055)http://anandology.com/python-practice-book/modules.html -->
+<html class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths" lang="en"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>3. Modules — Python Practice Book</title>
+  
+
+  
+  
+
+  
+  <link href="./3. Modules — Python Practice Book_files/css" rel="stylesheet" type="text/css">
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="./3. Modules — Python Practice Book_files/theme.css" type="text/css">
+  
+
+  
+    <link rel="top" title="Python Practice Book" href="http://anandology.com/python-practice-book/index.html">
+        <link rel="next" title="4. Object Oriented Programming" href="http://anandology.com/python-practice-book/object_oriented_programming.html">
+        <link rel="prev" title="2. Working with Data" href="http://anandology.com/python-practice-book/working-with-data.html">
+ 
+
+<script type="text/javascript" async="" src="./3. Modules — Python Practice Book_files/ga.js"></script><script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31293347-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+
+  
+  <script src="./3. Modules — Python Practice Book_files/modernizr.min.js"></script>
+
+<script type="text/javascript" async="" src="./3. Modules — Python Practice Book_files/in.php"></script></head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="http://anandology.com/python-practice-book/index.html" class="fa fa-home"> Python Practice Book</a>
+        <div role="search">
+  <form id="rtd-search-form" class="wy-form" action="http://anandology.com/python-practice-book/search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs">
+    <input type="hidden" name="check_keywords" value="yes">
+    <input type="hidden" name="area" value="default">
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="http://anandology.com/python-practice-book/getting-started.html">1. Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/getting-started.html#running-python-interpreter">1.1. Running Python Interpreter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/getting-started.html#running-python-scripts">1.2. Running Python Scripts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/getting-started.html#assignments">1.3. Assignments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/getting-started.html#numbers">1.4. Numbers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/getting-started.html#strings">1.5. Strings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/getting-started.html#functions">1.6. Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/getting-started.html#conditional-expressions">1.7. Conditional Expressions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/getting-started.html#lists">1.8. Lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/getting-started.html#modules">1.9. Modules</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="http://anandology.com/python-practice-book/working-with-data.html">2. Working with Data</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/working-with-data.html#lists">2.1. Lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/working-with-data.html#tuples">2.2. Tuples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/working-with-data.html#sets">2.3. Sets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/working-with-data.html#strings">2.4. Strings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/working-with-data.html#working-with-files">2.5. Working With Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/working-with-data.html#list-comprehensions">2.6. List Comprehensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/working-with-data.html#dictionaries">2.7. Dictionaries</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">3. Modules</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/modules.html#standard-library">3.1. Standard Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/modules.html#installing-third-party-modules">3.2. Installing third-party modules</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="http://anandology.com/python-practice-book/object_oriented_programming.html">4. Object Oriented Programming</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/object_oriented_programming.html#state">4.1. State</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/object_oriented_programming.html#classes-and-objects">4.2. Classes and Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/object_oriented_programming.html#inheritance">4.3. Inheritance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/object_oriented_programming.html#special-class-methods">4.4. Special Class Methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/object_oriented_programming.html#errors-and-exceptions">4.5. Errors and Exceptions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="http://anandology.com/python-practice-book/iterators.html">5. Iterators &amp; Generators</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/iterators.html#iterators">5.1. Iterators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/iterators.html#generators">5.2. Generators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/iterators.html#generator-expressions">5.3. Generator Expressions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/iterators.html#itertools">5.4. Itertools</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="http://anandology.com/python-practice-book/functional-programming.html">6. Functional Programming</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/functional-programming.html#recursion">6.1. Recursion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/functional-programming.html#higher-order-functions-decorators">6.2. Higher Order Functions &amp; Decorators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/functional-programming.html#exec-eval">6.3. exec &amp; eval</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="http://anandology.com/python-practice-book/index.html">Python Practice Book</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="http://anandology.com/python-practice-book/index.html">Docs</a> »</li>
+      
+    <li>3. Modules</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="http://anandology.com/python-practice-book/_sources/modules.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr>
+</div>
+          <div role="main">
+            
+  <div class="section" id="modules">
+<h1>3. Modules<a class="headerlink" href="http://anandology.com/python-practice-book/modules.html#modules" title="Permalink to this headline">¶</a></h1>
+<p>Modules are reusable libraries of code in Python. Python comes with many standard library modules.</p>
+<p>A module is imported using the <cite>import</cite> statement.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">time</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span> <span class="n">time</span><span class="o">.</span><span class="n">asctime</span><span class="p">()</span>
+<span class="go">'Fri Mar 30 12:59:21 2012'</span>
+</pre></div>
+</div>
+<p>In this example, we’ve imported the <cite>time</cite> module and called the <cite>asctime</cite>
+function from that module, which returns current time as a string.</p>
+<p>There is also another way to use the import statement.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">time</span> <span class="kn">import</span> <span class="n">asctime</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">asctime</span><span class="p">()</span>
+<span class="go">'Fri Mar 30 13:01:37 2012'</span>
+</pre></div>
+</div>
+<p>Here were imported just the <cite>asctime</cite> function from the <cite>time</cite> module.</p>
+<p>The <cite>pydoc</cite> command provides help on any module or a function.</p>
+<div class="highlight-text"><div class="highlight"><pre>$ pydoc time
+Help on module time:
+
+NAME
+    time - This module provides various functions to manipulate time values.
+...
+
+$ pydoc time.asctime
+Help on built-in function asctime in time:
+
+time.asctime = asctime(...)
+    asctime([tuple]) -&gt; string
+...
+</pre></div>
+</div>
+<p>On Windows, the <cite>pydoc</cite> command is not available. The work-around is to use, the built-in <cite>help</cite> function.</p>
+<div class="highlight-text"><div class="highlight"><pre>&gt;&gt;&gt; help('time')
+Help on module time:
+
+NAME
+    time - This module provides various functions to manipulate time values.
+...
+</pre></div>
+</div>
+<p>Writing our own modules is very simple.</p>
+<p>For example, create a file called <cite>num.py</cite> with the following content.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">def</span> <span class="nf">square</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">*</span> <span class="n">x</span>
+
+<span class="k">def</span> <span class="nf">cube</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">*</span> <span class="n">x</span> <span class="o">*</span> <span class="n">x</span>
+</pre></div>
+</div>
+<p>Now open Python interterter:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">num</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">num</span><span class="o">.</span><span class="n">square</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="go">9</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">num</span><span class="o">.</span><span class="n">cube</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="go">27</span>
+</pre></div>
+</div>
+<p>Thats all we’ve written a python library.</p>
+<p>Try <cite>pydoc num</cite> (<cite>pydoc.bat numbers</cite> on Windows) to see documentation for this numbers modules. It won’t have any documentation as we haven’t providied anything yet.</p>
+<p>In Python, it is possible to associate documentation for each module, function using docstrings. Docstrings are strings written at the top of the module or at the beginning of a function.</p>
+<p>Lets try to document our <cite>num</cite> module by changing the contents of <cite>num.py</cite></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="sd">"""The num module provides utilties to work on numbers.</span>
+
+<span class="sd">Current it provides square and cube.</span>
+<span class="sd">"""</span>
+
+<span class="k">def</span> <span class="nf">square</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="sd">"""Computes square of a number."""</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">*</span> <span class="n">x</span>
+
+<span class="k">def</span> <span class="nf">cube</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="sd">"""Computes cube of a number."""</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">*</span> <span class="n">x</span>
+</pre></div>
+</div>
+<p>The pydoc command will now show us the doumentation nicely formatted.</p>
+<div class="highlight-text"><div class="highlight"><pre>Help on module num:
+
+NAME
+    num - The num module provides utilties to work on numbers.
+
+FILE
+    /Users/anand/num.py
+
+DESCRIPTION
+    Current it provides square and cube.
+
+FUNCTIONS
+    cube(x)
+        Computes cube of a number.
+
+    square(x)
+        Computes square of a number.
+</pre></div>
+</div>
+<p>Under the hood, python stores the documentation as a special field called <cite>__doc__</cite>.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">os</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span> <span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="o">.</span><span class="n">__doc__</span>
+<span class="go">getcwd() -&gt; path</span>
+
+<span class="go">Return a string representing the current working directory.</span>
+</pre></div>
+</div>
+<div class="section" id="standard-library">
+<h2>3.1. Standard Library<a class="headerlink" href="http://anandology.com/python-practice-book/modules.html#standard-library" title="Permalink to this headline">¶</a></h2>
+<p>Python comes with many standard library modules. Lets look at some of the most commonly used ones.</p>
+<div class="section" id="os-module">
+<h3>3.1.1. os module<a class="headerlink" href="http://anandology.com/python-practice-book/modules.html#os-module" title="Permalink to this headline">¶</a></h3>
+<p>The <cite>os</cite> and <cite>os.path</cite> modules provides functionality to work with files, directories etc.</p>
+<p><strong>Problem 1: </strong>Write a program to list all files in the given directory.</p>
+<p><strong>Problem 2: </strong>Write a program <cite>extcount.py</cite> to count number of files for each
+extension in the given directory. The program should take a directory name
+ as argument and print count and extension for each available file extension.</p>
+<div class="highlight-text"><div class="highlight"><pre>$ python extcount.py src/
+14 py
+4 txt
+1 csv
+</pre></div>
+</div>
+<p><strong>Problem 3: </strong>Write a program to list all the files in the given directory along
+with their length and last modification time. The output should contain one
+line for each file containing filename, length and modification date separated
+by tabs.</p><p>Hint: see help for <tt class="docutils literal"><span class="pre">os.stat</span></tt>.</p>
+<p></p>
+<p><strong>Problem 4: </strong>Write a program to print directory tree. The program should take
+path of a directory as argument and print all the files in it recursively as
+a tree.</p>
+<div class="highlight-text"><div class="highlight"><pre>$ python dirtree.py foo
+foo
+|-- a.txt
+|-- b.txt
+|-- code
+|   |-- a.py
+|   |-- b.py
+|   |-- docs
+|   |   |-- a.txt
+|   |   \-- b.txt
+|   \-- x.py
+\-- z.txt
+</pre></div>
+</div>
+</div>
+<div class="section" id="urllib-module">
+<h3>3.1.2. urllib module<a class="headerlink" href="http://anandology.com/python-practice-book/modules.html#urllib-module" title="Permalink to this headline">¶</a></h3>
+<p>The <cite>urllib</cite> module provides functionality to download webpages.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">urllib</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">response</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="s">"http://python.org/"</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span> <span class="n">response</span><span class="o">.</span><span class="n">headers</span>
+<span class="go">Date: Fri, 30 Mar 2012 09:24:55 GMT</span>
+<span class="go">Server: Apache/2.2.16 (Debian)</span>
+<span class="go">Last-Modified: Fri, 30 Mar 2012 08:42:25 GMT</span>
+<span class="go">ETag: "105800d-4b7b-4bc71d1db9e40"</span>
+<span class="go">Accept-Ranges: bytes</span>
+<span class="go">Content-Length: 19323</span>
+<span class="go">Connection: close</span>
+<span class="go">Content-Type: text/html</span>
+<span class="go">X-Pad: avoid browser bug</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">response</span><span class="o">.</span><span class="n">header</span><span class="p">[</span><span class="s">'Content-Type'</span><span class="p">]</span>
+<span class="go">'text/html'</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">content</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><strong>Problem 5: </strong>Write a program wget.py to download a given URL. The program should accept a URL as argument, download it and save it with the basename of the URL. If the URL ends with a /, consider the basename as index.html.</p>
+<div class="highlight-text"><div class="highlight"><pre>$ python wget.py http://docs.python.org/tutorial/interpreter.html
+saving http://docs.python.org/tutorial/interpreter.html as interpreter.html.
+
+$ python wget.py http://docs.python.org/tutorial/
+saving http://docs.python.org/tutorial/ as index.html.
+</pre></div>
+</div>
+</div>
+<div class="section" id="re-module">
+<h3>3.1.3. re module<a class="headerlink" href="http://anandology.com/python-practice-book/modules.html#re-module" title="Permalink to this headline">¶</a></h3>
+<p><strong>Problem 6: </strong>Write a program antihtml.py that takes a URL as argument, downloads the html from web and print it after stripping html tags.</p>
+<div class="highlight-text"><div class="highlight"><pre>$ python antihtml.py index.html
+...
+The Python interpreter is usually installed as /usr/local/bin/python on
+those machines where it is available; putting /usr/local/bin in your
+...
+</pre></div>
+</div>
+<p><strong>Problem 7: </strong>Write a function <cite>make_slug</cite> that takes a name converts it into a slug. A slug is a string where spaces and special characters are replaced by a hyphen, typically used to create blog post URL from post title. It should also make sure there are no more than one hyphen in any place and there are no hyphens at the biginning and end of the slug.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">make_slug</span><span class="p">(</span><span class="s">"hello world"</span><span class="p">)</span>
+<span class="go">'hello-world'</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">make_slug</span><span class="p">(</span><span class="s">"hello  world!"</span><span class="p">)</span>
+<span class="go">'hello-world'</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">make_slug</span><span class="p">(</span><span class="s">" --hello-  world--"</span><span class="p">)</span>
+<span class="go">'hello-world'</span>
+</pre></div>
+</div>
+<p><strong>Problem 8: </strong>Write a program <cite>links.py</cite> that takes URL of a webpage as argument
+and prints all the URLs linked from that webpage.</p>
+<p><strong>Problem 9: </strong>Write a regular expression to validate a phone number.</p>
+</div>
+<div class="section" id="json-module">
+<h3>3.1.4. json module<a class="headerlink" href="http://anandology.com/python-practice-book/modules.html#json-module" title="Permalink to this headline">¶</a></h3>
+<p><strong>Problem 10: </strong>Write a program myip.py to print the external IP address of the
+machine. Use the response from <tt class="docutils literal"><span class="pre">http://httpbin.org/get</span></tt> and read the IP
+address from there. The program should print only the IP address and nothing
+else.</p>
+</div>
+<div class="section" id="zipfile-module">
+<h3>3.1.5. zipfile module<a class="headerlink" href="http://anandology.com/python-practice-book/modules.html#zipfile-module" title="Permalink to this headline">¶</a></h3>
+<p>The <cite>zipfile</cite> module provides interface to read and write zip files.</p>
+<p>Here are some examples to demonstate the power of zipfile module.</p>
+<p>The following example prints names of all the files in a zip archive.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">zipfile</span>
+<span class="n">z</span> <span class="o">=</span> <span class="n">zipfile</span><span class="o">.</span><span class="n">ZipFile</span><span class="p">(</span><span class="s">"a.zip"</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">z</span><span class="o">.</span><span class="n">namelist</span><span class="p">():</span>
+    <span class="k">print</span> <span class="n">name</span>
+</pre></div>
+</div>
+<p>The following example prints each file in the zip archive.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">zipfile</span>
+<span class="n">z</span> <span class="o">=</span> <span class="n">zipfile</span><span class="o">.</span><span class="n">ZipFile</span><span class="p">(</span><span class="s">"a.zip"</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">z</span><span class="o">.</span><span class="n">namelist</span><span class="p">():</span>
+    <span class="k">print</span>
+    <span class="k">print</span> <span class="s">"FILE:"</span><span class="p">,</span> <span class="n">name</span>
+    <span class="k">print</span>
+    <span class="k">print</span> <span class="n">z</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Problem 11: </strong>Write a python program <cite>zip.py</cite> to create a zip file. The program should take name of zip file as first argument and files to add as rest of the arguments.</p>
+<div class="highlight-text"><div class="highlight"><pre>$ python zip.py foo.zip file1.txt file2.txt
+</pre></div>
+</div>
+<p><strong>Problem 12: </strong>Write a program <cite>mydoc.py</cite> to implement the functionality of pydoc. The program should take the module name as argument and print documentation for the module and each of the functions defined in that module.</p>
+<div class="highlight-text"><div class="highlight"><pre>$ python mydoc.py os
+Help on module os:
+
+DESCRIPTION
+
+os - OS routines for Mac, NT, or Posix depending on what system we're on.
+...
+
+FUNCTIONS
+
+getcwd()
+    ...
+</pre></div>
+</div>
+<dl class="docutils">
+<dt>Hints:</dt>
+<dd><ul class="first last simple">
+<li>The <cite>dir</cite> function to get all entries of a module</li>
+<li>The <cite>inspect.isfunction</cite> function can be used to test if given object is a function</li>
+<li><cite>x.__doc__</cite> gives the docstring for x.</li>
+<li>The <cite>__import__</cite> function can be used to import a module by name</li>
+</ul>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="installing-third-party-modules">
+<h2>3.2. Installing third-party modules<a class="headerlink" href="http://anandology.com/python-practice-book/modules.html#installing-third-party-modules" title="Permalink to this headline">¶</a></h2>
+<p>PyPI, The Python Package Index maintains the list of Python packages available. The third-party module developers usually register at PyPI and uploads their packages there.</p>
+<p>The standard way to installing a python module is using <cite>pip</cite> or <cite>easy_install</cite>. Pip is more modern and perferred.</p>
+<p>Lets start with installing <cite>easy_install</cite>.</p>
+<ul class="simple">
+<li>Download the easy_install install script <a class="reference external" href="http://peak.telecommunity.com/dist/ez_setup.py">ez_setup.py</a>.</li>
+<li>Run it using Python.</li>
+</ul>
+<p>That will install <tt class="docutils literal"><span class="pre">easy_install</span></tt>, the script used to install third-party python packages.</p>
+<p>Before installing new packages, lets understand how to manage virtual environments for installing python packages.</p>
+<p>Earlier the only way of installing python packages was system wide. When used this way, packages installed for one project can conflict with other and create trouble. So people invented a way to create isolated Python environment to install packages. This tool is called <a class="reference external" href="http://www.virtualenv.org/">virtualenv</a>.</p>
+<p>To install <tt class="docutils literal"><span class="pre">virtualenv</span></tt>:</p>
+<blockquote>
+<div>$ easy_install virtualenv</div></blockquote>
+<p>Installing virtualenv also installs the <cite>pip</cite> command, a better replace for <cite>easy_install</cite>.</p>
+<p>Once it is installed, create a new virtual env by running the <tt class="docutils literal"><span class="pre">virtualenv</span></tt> command.</p>
+<div class="highlight-text"><div class="highlight"><pre>$ virtualenv testenv
+</pre></div>
+</div>
+<p>Now to switch to that env.</p>
+<p>On UNIX/Mac OS X:</p>
+<div class="highlight-text"><div class="highlight"><pre>$ source testenv/bin/activate
+</pre></div>
+</div>
+<p>On Windows:</p>
+<div class="highlight-text"><div class="highlight"><pre>&gt; testenv\Scripts\activate
+</pre></div>
+</div>
+<p>Now the virtualenv <cite>testenv</cite> is activated.</p>
+<p>Now all the packages installed will be limited to this virtualenv. Lets try to install a third-party package.</p>
+<div class="highlight-text"><div class="highlight"><pre>$ pip install tablib
+</pre></div>
+</div>
+<p>This installs a third-party library called <tt class="docutils literal"><span class="pre">tablib</span></tt>.</p>
+<p>The <tt class="docutils literal"><span class="pre">tablib</span></tt> library is a small little library to work with tabular data and write csv and Excel files.</p>
+<p>Here is a simple example.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="c"># create a dataset</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">tablib</span><span class="o">.</span><span class="n">Dataset</span><span class="p">()</span>
+
+<span class="c"># Add rows</span>
+<span class="n">data</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="s">"A"</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+<span class="n">data</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="s">"B"</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+<span class="n">data</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="s">"C"</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+
+<span class="c"># save as csv</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s">'test.csv'</span><span class="p">,</span> <span class="s">'wb'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">csv</span><span class="p">)</span>
+
+<span class="c"># save as Excel</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s">'test.xls'</span><span class="p">,</span> <span class="s">'wb'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">xls</span><span class="p">)</span>
+
+<span class="c"># save as Excel 07+</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s">'test.xlsx'</span><span class="p">,</span> <span class="s">'wb'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">xlsx</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>It is even possible to create multi-sheet excel files.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">sheet1</span> <span class="o">=</span> <span class="n">tablib</span><span class="o">.</span><span class="n">Dataset</span><span class="p">()</span>
+<span class="n">sheet1</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="s">"A1"</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+<span class="n">sheet1</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="s">"A2"</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+
+<span class="n">sheet2</span> <span class="o">=</span> <span class="n">tablib</span><span class="o">.</span><span class="n">Dataset</span><span class="p">()</span>
+<span class="n">sheet2</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="s">"B1"</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+<span class="n">sheet2</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="s">"B2"</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+
+
+<span class="n">book</span> <span class="o">=</span> <span class="n">tablib</span><span class="o">.</span><span class="n">Databook</span><span class="p">([</span><span class="n">data1</span><span class="p">,</span> <span class="n">data2</span><span class="p">])</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s">'book.xlsx'</span><span class="p">,</span> <span class="s">'wb'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">book</span><span class="o">.</span><span class="n">xlsx</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Problem 13: </strong>Write a program <tt class="docutils literal"><span class="pre">csv2xls.py</span></tt> that reads a csv file and exports
+it as Excel file. The prigram should take two arguments. The name of the csv
+file to read as first argument and the name of the Excel file to write as the
+second argument.</p>
+<p><strong>Problem 14: </strong>Create a new virtualenv and install BeautifulSoup. BeautifulSoup
+is very good library for parsing HTML. Try using it to extract all HTML
+links from a webpage.</p>
+<p>Read the <a class="reference external" href="http://www.crummy.com/software/BeautifulSoup/bs3/documentation.html">BeautifulSoup documentation</a> to get started.</p>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="http://anandology.com/python-practice-book/object_oriented_programming.html" class="btn btn-neutral float-right" title="4. Object Oriented Programming">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="http://anandology.com/python-practice-book/working-with-data.html" class="btn btn-neutral" title="2. Working with Data"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr>
+
+  <div role="contentinfo">
+    <p>
+        © Copyright 2014, <a href="http://anandology.com/">Anand Chitipothu</a>.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org/">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'2014-08-10',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="./3. Modules — Python Practice Book_files/jquery.js"></script>
+      <script type="text/javascript" src="./3. Modules — Python Practice Book_files/underscore.js"></script>
+      <script type="text/javascript" src="./3. Modules — Python Practice Book_files/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="./3. Modules — Python Practice Book_files/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+
+<script src="./3. Modules — Python Practice Book_files/js" type="text/javascript"></script>
+<script type="text/javascript">try{ clicky.init(66579110); }catch(e){}</script>
+<noscript>&lt;p&gt;&lt;img alt="Clicky" width="1" height="1" src="//in.getclicky.com/66579110ns.gif" /&gt;&lt;/p&gt;</noscript>
+
+
+
+
+</body></html>
+<!DOCTYPE html>
+<!-- saved from url=(0055)http://anandology.com/python-practice-book/modules.html -->
+<html class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths" lang="en"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>3. Modules — Python Practice Book</title>
+  
+
+  
+  
+
+  
+  <link href="./3. Modules — Python Practice Book_files/css" rel="stylesheet" type="text/css">
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="./3. Modules — Python Practice Book_files/theme.css" type="text/css">
+  
+
+  
+    <link rel="top" title="Python Practice Book" href="http://anandology.com/python-practice-book/index.html">
+        <link rel="next" title="4. Object Oriented Programming" href="http://anandology.com/python-practice-book/object_oriented_programming.html">
+        <link rel="prev" title="2. Working with Data" href="http://anandology.com/python-practice-book/working-with-data.html">
+ 
+
+<script type="text/javascript" async="" src="./3. Modules — Python Practice Book_files/ga.js"></script><script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31293347-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+
+  
+  <script src="./3. Modules — Python Practice Book_files/modernizr.min.js"></script>
+
+<script type="text/javascript" async="" src="./3. Modules — Python Practice Book_files/in.php"></script></head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="http://anandology.com/python-practice-book/index.html" class="fa fa-home"> Python Practice Book</a>
+        <div role="search">
+  <form id="rtd-search-form" class="wy-form" action="http://anandology.com/python-practice-book/search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs">
+    <input type="hidden" name="check_keywords" value="yes">
+    <input type="hidden" name="area" value="default">
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="http://anandology.com/python-practice-book/getting-started.html">1. Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/getting-started.html#running-python-interpreter">1.1. Running Python Interpreter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/getting-started.html#running-python-scripts">1.2. Running Python Scripts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/getting-started.html#assignments">1.3. Assignments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/getting-started.html#numbers">1.4. Numbers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/getting-started.html#strings">1.5. Strings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/getting-started.html#functions">1.6. Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/getting-started.html#conditional-expressions">1.7. Conditional Expressions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/getting-started.html#lists">1.8. Lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/getting-started.html#modules">1.9. Modules</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="http://anandology.com/python-practice-book/working-with-data.html">2. Working with Data</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/working-with-data.html#lists">2.1. Lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/working-with-data.html#tuples">2.2. Tuples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/working-with-data.html#sets">2.3. Sets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/working-with-data.html#strings">2.4. Strings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/working-with-data.html#working-with-files">2.5. Working With Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/working-with-data.html#list-comprehensions">2.6. List Comprehensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/working-with-data.html#dictionaries">2.7. Dictionaries</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">3. Modules</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/modules.html#standard-library">3.1. Standard Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/modules.html#installing-third-party-modules">3.2. Installing third-party modules</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="http://anandology.com/python-practice-book/object_oriented_programming.html">4. Object Oriented Programming</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/object_oriented_programming.html#state">4.1. State</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/object_oriented_programming.html#classes-and-objects">4.2. Classes and Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/object_oriented_programming.html#inheritance">4.3. Inheritance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/object_oriented_programming.html#special-class-methods">4.4. Special Class Methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/object_oriented_programming.html#errors-and-exceptions">4.5. Errors and Exceptions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="http://anandology.com/python-practice-book/iterators.html">5. Iterators &amp; Generators</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/iterators.html#iterators">5.1. Iterators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/iterators.html#generators">5.2. Generators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/iterators.html#generator-expressions">5.3. Generator Expressions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/iterators.html#itertools">5.4. Itertools</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="http://anandology.com/python-practice-book/functional-programming.html">6. Functional Programming</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/functional-programming.html#recursion">6.1. Recursion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/functional-programming.html#higher-order-functions-decorators">6.2. Higher Order Functions &amp; Decorators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/functional-programming.html#exec-eval">6.3. exec &amp; eval</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="http://anandology.com/python-practice-book/index.html">Python Practice Book</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="http://anandology.com/python-practice-book/index.html">Docs</a> »</li>
+      
+    <li>3. Modules</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="http://anandology.com/python-practice-book/_sources/modules.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr>
+</div>
+          <div role="main">
+            
+  <div class="section" id="modules">
+<h1>3. Modules<a class="headerlink" href="http://anandology.com/python-practice-book/modules.html#modules" title="Permalink to this headline">¶</a></h1>
+<p>Modules are reusable libraries of code in Python. Python comes with many standard library modules.</p>
+<p>A module is imported using the <cite>import</cite> statement.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">time</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span> <span class="n">time</span><span class="o">.</span><span class="n">asctime</span><span class="p">()</span>
+<span class="go">'Fri Mar 30 12:59:21 2012'</span>
+</pre></div>
+</div>
+<p>In this example, we’ve imported the <cite>time</cite> module and called the <cite>asctime</cite>
+function from that module, which returns current time as a string.</p>
+<p>There is also another way to use the import statement.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">time</span> <span class="kn">import</span> <span class="n">asctime</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">asctime</span><span class="p">()</span>
+<span class="go">'Fri Mar 30 13:01:37 2012'</span>
+</pre></div>
+</div>
+<p>Here were imported just the <cite>asctime</cite> function from the <cite>time</cite> module.</p>
+<p>The <cite>pydoc</cite> command provides help on any module or a function.</p>
+<div class="highlight-text"><div class="highlight"><pre>$ pydoc time
+Help on module time:
+
+NAME
+    time - This module provides various functions to manipulate time values.
+...
+
+$ pydoc time.asctime
+Help on built-in function asctime in time:
+
+time.asctime = asctime(...)
+    asctime([tuple]) -&gt; string
+...
+</pre></div>
+</div>
+<p>On Windows, the <cite>pydoc</cite> command is not available. The work-around is to use, the built-in <cite>help</cite> function.</p>
+<div class="highlight-text"><div class="highlight"><pre>&gt;&gt;&gt; help('time')
+Help on module time:
+
+NAME
+    time - This module provides various functions to manipulate time values.
+...
+</pre></div>
+</div>
+<p>Writing our own modules is very simple.</p>
+<p>For example, create a file called <cite>num.py</cite> with the following content.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">def</span> <span class="nf">square</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">*</span> <span class="n">x</span>
+
+<span class="k">def</span> <span class="nf">cube</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">*</span> <span class="n">x</span> <span class="o">*</span> <span class="n">x</span>
+</pre></div>
+</div>
+<p>Now open Python interterter:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">num</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">num</span><span class="o">.</span><span class="n">square</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="go">9</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">num</span><span class="o">.</span><span class="n">cube</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="go">27</span>
+</pre></div>
+</div>
+<p>Thats all we’ve written a python library.</p>
+<p>Try <cite>pydoc num</cite> (<cite>pydoc.bat numbers</cite> on Windows) to see documentation for this numbers modules. It won’t have any documentation as we haven’t providied anything yet.</p>
+<p>In Python, it is possible to associate documentation for each module, function using docstrings. Docstrings are strings written at the top of the module or at the beginning of a function.</p>
+<p>Lets try to document our <cite>num</cite> module by changing the contents of <cite>num.py</cite></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="sd">"""The num module provides utilties to work on numbers.</span>
+
+<span class="sd">Current it provides square and cube.</span>
+<span class="sd">"""</span>
+
+<span class="k">def</span> <span class="nf">square</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="sd">"""Computes square of a number."""</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">*</span> <span class="n">x</span>
+
+<span class="k">def</span> <span class="nf">cube</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="sd">"""Computes cube of a number."""</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">*</span> <span class="n">x</span>
+</pre></div>
+</div>
+<p>The pydoc command will now show us the doumentation nicely formatted.</p>
+<div class="highlight-text"><div class="highlight"><pre>Help on module num:
+
+NAME
+    num - The num module provides utilties to work on numbers.
+
+FILE
+    /Users/anand/num.py
+
+DESCRIPTION
+    Current it provides square and cube.
+
+FUNCTIONS
+    cube(x)
+        Computes cube of a number.
+
+    square(x)
+        Computes square of a number.
+</pre></div>
+</div>
+<p>Under the hood, python stores the documentation as a special field called <cite>__doc__</cite>.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">os</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span> <span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="o">.</span><span class="n">__doc__</span>
+<span class="go">getcwd() -&gt; path</span>
+
+<span class="go">Return a string representing the current working directory.</span>
+</pre></div>
+</div>
+<div class="section" id="standard-library">
+<h2>3.1. Standard Library<a class="headerlink" href="http://anandology.com/python-practice-book/modules.html#standard-library" title="Permalink to this headline">¶</a></h2>
+<p>Python comes with many standard library modules. Lets look at some of the most commonly used ones.</p>
+<div class="section" id="os-module">
+<h3>3.1.1. os module<a class="headerlink" href="http://anandology.com/python-practice-book/modules.html#os-module" title="Permalink to this headline">¶</a></h3>
+<p>The <cite>os</cite> and <cite>os.path</cite> modules provides functionality to work with files, directories etc.</p>
+<p><strong>Problem 1: </strong>Write a program to list all files in the given directory.</p>
+<p><strong>Problem 2: </strong>Write a program <cite>extcount.py</cite> to count number of files for each
+extension in the given directory. The program should take a directory name
+ as argument and print count and extension for each available file extension.</p>
+<div class="highlight-text"><div class="highlight"><pre>$ python extcount.py src/
+14 py
+4 txt
+1 csv
+</pre></div>
+</div>
+<p><strong>Problem 3: </strong>Write a program to list all the files in the given directory along
+with their length and last modification time. The output should contain one
+line for each file containing filename, length and modification date separated
+by tabs.</p><p>Hint: see help for <tt class="docutils literal"><span class="pre">os.stat</span></tt>.</p>
+<p></p>
+<p><strong>Problem 4: </strong>Write a program to print directory tree. The program should take
+path of a directory as argument and print all the files in it recursively as
+a tree.</p>
+<div class="highlight-text"><div class="highlight"><pre>$ python dirtree.py foo
+foo
+|-- a.txt
+|-- b.txt
+|-- code
+|   |-- a.py
+|   |-- b.py
+|   |-- docs
+|   |   |-- a.txt
+|   |   \-- b.txt
+|   \-- x.py
+\-- z.txt
+</pre></div>
+</div>
+</div>
+<div class="section" id="urllib-module">
+<h3>3.1.2. urllib module<a class="headerlink" href="http://anandology.com/python-practice-book/modules.html#urllib-module" title="Permalink to this headline">¶</a></h3>
+<p>The <cite>urllib</cite> module provides functionality to download webpages.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">urllib</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">response</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="s">"http://python.org/"</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span> <span class="n">response</span><span class="o">.</span><span class="n">headers</span>
+<span class="go">Date: Fri, 30 Mar 2012 09:24:55 GMT</span>
+<span class="go">Server: Apache/2.2.16 (Debian)</span>
+<span class="go">Last-Modified: Fri, 30 Mar 2012 08:42:25 GMT</span>
+<span class="go">ETag: "105800d-4b7b-4bc71d1db9e40"</span>
+<span class="go">Accept-Ranges: bytes</span>
+<span class="go">Content-Length: 19323</span>
+<span class="go">Connection: close</span>
+<span class="go">Content-Type: text/html</span>
+<span class="go">X-Pad: avoid browser bug</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">response</span><span class="o">.</span><span class="n">header</span><span class="p">[</span><span class="s">'Content-Type'</span><span class="p">]</span>
+<span class="go">'text/html'</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">content</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><strong>Problem 5: </strong>Write a program wget.py to download a given URL. The program should accept a URL as argument, download it and save it with the basename of the URL. If the URL ends with a /, consider the basename as index.html.</p>
+<div class="highlight-text"><div class="highlight"><pre>$ python wget.py http://docs.python.org/tutorial/interpreter.html
+saving http://docs.python.org/tutorial/interpreter.html as interpreter.html.
+
+$ python wget.py http://docs.python.org/tutorial/
+saving http://docs.python.org/tutorial/ as index.html.
+</pre></div>
+</div>
+</div>
+<div class="section" id="re-module">
+<h3>3.1.3. re module<a class="headerlink" href="http://anandology.com/python-practice-book/modules.html#re-module" title="Permalink to this headline">¶</a></h3>
+<p><strong>Problem 6: </strong>Write a program antihtml.py that takes a URL as argument, downloads the html from web and print it after stripping html tags.</p>
+<div class="highlight-text"><div class="highlight"><pre>$ python antihtml.py index.html
+...
+The Python interpreter is usually installed as /usr/local/bin/python on
+those machines where it is available; putting /usr/local/bin in your
+...
+</pre></div>
+</div>
+<p><strong>Problem 7: </strong>Write a function <cite>make_slug</cite> that takes a name converts it into a slug. A slug is a string where spaces and special characters are replaced by a hyphen, typically used to create blog post URL from post title. It should also make sure there are no more than one hyphen in any place and there are no hyphens at the biginning and end of the slug.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">make_slug</span><span class="p">(</span><span class="s">"hello world"</span><span class="p">)</span>
+<span class="go">'hello-world'</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">make_slug</span><span class="p">(</span><span class="s">"hello  world!"</span><span class="p">)</span>
+<span class="go">'hello-world'</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">make_slug</span><span class="p">(</span><span class="s">" --hello-  world--"</span><span class="p">)</span>
+<span class="go">'hello-world'</span>
+</pre></div>
+</div>
+<p><strong>Problem 8: </strong>Write a program <cite>links.py</cite> that takes URL of a webpage as argument
+and prints all the URLs linked from that webpage.</p>
+<p><strong>Problem 9: </strong>Write a regular expression to validate a phone number.</p>
+</div>
+<div class="section" id="json-module">
+<h3>3.1.4. json module<a class="headerlink" href="http://anandology.com/python-practice-book/modules.html#json-module" title="Permalink to this headline">¶</a></h3>
+<p><strong>Problem 10: </strong>Write a program myip.py to print the external IP address of the
+machine. Use the response from <tt class="docutils literal"><span class="pre">http://httpbin.org/get</span></tt> and read the IP
+address from there. The program should print only the IP address and nothing
+else.</p>
+</div>
+<div class="section" id="zipfile-module">
+<h3>3.1.5. zipfile module<a class="headerlink" href="http://anandology.com/python-practice-book/modules.html#zipfile-module" title="Permalink to this headline">¶</a></h3>
+<p>The <cite>zipfile</cite> module provides interface to read and write zip files.</p>
+<p>Here are some examples to demonstate the power of zipfile module.</p>
+<p>The following example prints names of all the files in a zip archive.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">zipfile</span>
+<span class="n">z</span> <span class="o">=</span> <span class="n">zipfile</span><span class="o">.</span><span class="n">ZipFile</span><span class="p">(</span><span class="s">"a.zip"</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">z</span><span class="o">.</span><span class="n">namelist</span><span class="p">():</span>
+    <span class="k">print</span> <span class="n">name</span>
+</pre></div>
+</div>
+<p>The following example prints each file in the zip archive.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">zipfile</span>
+<span class="n">z</span> <span class="o">=</span> <span class="n">zipfile</span><span class="o">.</span><span class="n">ZipFile</span><span class="p">(</span><span class="s">"a.zip"</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">z</span><span class="o">.</span><span class="n">namelist</span><span class="p">():</span>
+    <span class="k">print</span>
+    <span class="k">print</span> <span class="s">"FILE:"</span><span class="p">,</span> <span class="n">name</span>
+    <span class="k">print</span>
+    <span class="k">print</span> <span class="n">z</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Problem 11: </strong>Write a python program <cite>zip.py</cite> to create a zip file. The program should take name of zip file as first argument and files to add as rest of the arguments.</p>
+<div class="highlight-text"><div class="highlight"><pre>$ python zip.py foo.zip file1.txt file2.txt
+</pre></div>
+</div>
+<p><strong>Problem 12: </strong>Write a program <cite>mydoc.py</cite> to implement the functionality of pydoc. The program should take the module name as argument and print documentation for the module and each of the functions defined in that module.</p>
+<div class="highlight-text"><div class="highlight"><pre>$ python mydoc.py os
+Help on module os:
+
+DESCRIPTION
+
+os - OS routines for Mac, NT, or Posix depending on what system we're on.
+...
+
+FUNCTIONS
+
+getcwd()
+    ...
+</pre></div>
+</div>
+<dl class="docutils">
+<dt>Hints:</dt>
+<dd><ul class="first last simple">
+<li>The <cite>dir</cite> function to get all entries of a module</li>
+<li>The <cite>inspect.isfunction</cite> function can be used to test if given object is a function</li>
+<li><cite>x.__doc__</cite> gives the docstring for x.</li>
+<li>The <cite>__import__</cite> function can be used to import a module by name</li>
+</ul>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="installing-third-party-modules">
+<h2>3.2. Installing third-party modules<a class="headerlink" href="http://anandology.com/python-practice-book/modules.html#installing-third-party-modules" title="Permalink to this headline">¶</a></h2>
+<p>PyPI, The Python Package Index maintains the list of Python packages available. The third-party module developers usually register at PyPI and uploads their packages there.</p>
+<p>The standard way to installing a python module is using <cite>pip</cite> or <cite>easy_install</cite>. Pip is more modern and perferred.</p>
+<p>Lets start with installing <cite>easy_install</cite>.</p>
+<ul class="simple">
+<li>Download the easy_install install script <a class="reference external" href="http://peak.telecommunity.com/dist/ez_setup.py">ez_setup.py</a>.</li>
+<li>Run it using Python.</li>
+</ul>
+<p>That will install <tt class="docutils literal"><span class="pre">easy_install</span></tt>, the script used to install third-party python packages.</p>
+<p>Before installing new packages, lets understand how to manage virtual environments for installing python packages.</p>
+<p>Earlier the only way of installing python packages was system wide. When used this way, packages installed for one project can conflict with other and create trouble. So people invented a way to create isolated Python environment to install packages. This tool is called <a class="reference external" href="http://www.virtualenv.org/">virtualenv</a>.</p>
+<p>To install <tt class="docutils literal"><span class="pre">virtualenv</span></tt>:</p>
+<blockquote>
+<div>$ easy_install virtualenv</div></blockquote>
+<p>Installing virtualenv also installs the <cite>pip</cite> command, a better replace for <cite>easy_install</cite>.</p>
+<p>Once it is installed, create a new virtual env by running the <tt class="docutils literal"><span class="pre">virtualenv</span></tt> command.</p>
+<div class="highlight-text"><div class="highlight"><pre>$ virtualenv testenv
+</pre></div>
+</div>
+<p>Now to switch to that env.</p>
+<p>On UNIX/Mac OS X:</p>
+<div class="highlight-text"><div class="highlight"><pre>$ source testenv/bin/activate
+</pre></div>
+</div>
+<p>On Windows:</p>
+<div class="highlight-text"><div class="highlight"><pre>&gt; testenv\Scripts\activate
+</pre></div>
+</div>
+<p>Now the virtualenv <cite>testenv</cite> is activated.</p>
+<p>Now all the packages installed will be limited to this virtualenv. Lets try to install a third-party package.</p>
+<div class="highlight-text"><div class="highlight"><pre>$ pip install tablib
+</pre></div>
+</div>
+<p>This installs a third-party library called <tt class="docutils literal"><span class="pre">tablib</span></tt>.</p>
+<p>The <tt class="docutils literal"><span class="pre">tablib</span></tt> library is a small little library to work with tabular data and write csv and Excel files.</p>
+<p>Here is a simple example.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="c"># create a dataset</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">tablib</span><span class="o">.</span><span class="n">Dataset</span><span class="p">()</span>
+
+<span class="c"># Add rows</span>
+<span class="n">data</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="s">"A"</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+<span class="n">data</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="s">"B"</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+<span class="n">data</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="s">"C"</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+
+<span class="c"># save as csv</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s">'test.csv'</span><span class="p">,</span> <span class="s">'wb'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">csv</span><span class="p">)</span>
+
+<span class="c"># save as Excel</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s">'test.xls'</span><span class="p">,</span> <span class="s">'wb'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">xls</span><span class="p">)</span>
+
+<span class="c"># save as Excel 07+</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s">'test.xlsx'</span><span class="p">,</span> <span class="s">'wb'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">xlsx</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>It is even possible to create multi-sheet excel files.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">sheet1</span> <span class="o">=</span> <span class="n">tablib</span><span class="o">.</span><span class="n">Dataset</span><span class="p">()</span>
+<span class="n">sheet1</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="s">"A1"</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+<span class="n">sheet1</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="s">"A2"</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+
+<span class="n">sheet2</span> <span class="o">=</span> <span class="n">tablib</span><span class="o">.</span><span class="n">Dataset</span><span class="p">()</span>
+<span class="n">sheet2</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="s">"B1"</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+<span class="n">sheet2</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="s">"B2"</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+
+
+<span class="n">book</span> <span class="o">=</span> <span class="n">tablib</span><span class="o">.</span><span class="n">Databook</span><span class="p">([</span><span class="n">data1</span><span class="p">,</span> <span class="n">data2</span><span class="p">])</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s">'book.xlsx'</span><span class="p">,</span> <span class="s">'wb'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">book</span><span class="o">.</span><span class="n">xlsx</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Problem 13: </strong>Write a program <tt class="docutils literal"><span class="pre">csv2xls.py</span></tt> that reads a csv file and exports
+it as Excel file. The prigram should take two arguments. The name of the csv
+file to read as first argument and the name of the Excel file to write as the
+second argument.</p>
+<p><strong>Problem 14: </strong>Create a new virtualenv and install BeautifulSoup. BeautifulSoup
+is very good library for parsing HTML. Try using it to extract all HTML
+links from a webpage.</p>
+<p>Read the <a class="reference external" href="http://www.crummy.com/software/BeautifulSoup/bs3/documentation.html">BeautifulSoup documentation</a> to get started.</p>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="http://anandology.com/python-practice-book/object_oriented_programming.html" class="btn btn-neutral float-right" title="4. Object Oriented Programming">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="http://anandology.com/python-practice-book/working-with-data.html" class="btn btn-neutral" title="2. Working with Data"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr>
+
+  <div role="contentinfo">
+    <p>
+        © Copyright 2014, <a href="http://anandology.com/">Anand Chitipothu</a>.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org/">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'2014-08-10',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="./3. Modules — Python Practice Book_files/jquery.js"></script>
+      <script type="text/javascript" src="./3. Modules — Python Practice Book_files/underscore.js"></script>
+      <script type="text/javascript" src="./3. Modules — Python Practice Book_files/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="./3. Modules — Python Practice Book_files/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+
+<script src="./3. Modules — Python Practice Book_files/js" type="text/javascript"></script>
+<script type="text/javascript">try{ clicky.init(66579110); }catch(e){}</script>
+<noscript>&lt;p&gt;&lt;img alt="Clicky" width="1" height="1" src="//in.getclicky.com/66579110ns.gif" /&gt;&lt;/p&gt;</noscript>
+
+
+
+
+</body></html>
+<!DOCTYPE html>
+<!-- saved from url=(0055)http://anandology.com/python-practice-book/modules.html -->
+<html class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths" lang="en"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>3. Modules — Python Practice Book</title>
+  
+
+  
+  
+
+  
+  <link href="./3. Modules — Python Practice Book_files/css" rel="stylesheet" type="text/css">
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="./3. Modules — Python Practice Book_files/theme.css" type="text/css">
+  
+
+  
+    <link rel="top" title="Python Practice Book" href="http://anandology.com/python-practice-book/index.html">
+        <link rel="next" title="4. Object Oriented Programming" href="http://anandology.com/python-practice-book/object_oriented_programming.html">
+        <link rel="prev" title="2. Working with Data" href="http://anandology.com/python-practice-book/working-with-data.html">
+ 
+
+<script type="text/javascript" async="" src="./3. Modules — Python Practice Book_files/ga.js"></script><script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31293347-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+
+  
+  <script src="./3. Modules — Python Practice Book_files/modernizr.min.js"></script>
+
+<script type="text/javascript" async="" src="./3. Modules — Python Practice Book_files/in.php"></script></head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="http://anandology.com/python-practice-book/index.html" class="fa fa-home"> Python Practice Book</a>
+        <div role="search">
+  <form id="rtd-search-form" class="wy-form" action="http://anandology.com/python-practice-book/search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs">
+    <input type="hidden" name="check_keywords" value="yes">
+    <input type="hidden" name="area" value="default">
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="http://anandology.com/python-practice-book/getting-started.html">1. Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/getting-started.html#running-python-interpreter">1.1. Running Python Interpreter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/getting-started.html#running-python-scripts">1.2. Running Python Scripts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/getting-started.html#assignments">1.3. Assignments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/getting-started.html#numbers">1.4. Numbers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/getting-started.html#strings">1.5. Strings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/getting-started.html#functions">1.6. Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/getting-started.html#conditional-expressions">1.7. Conditional Expressions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/getting-started.html#lists">1.8. Lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/getting-started.html#modules">1.9. Modules</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="http://anandology.com/python-practice-book/working-with-data.html">2. Working with Data</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/working-with-data.html#lists">2.1. Lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/working-with-data.html#tuples">2.2. Tuples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/working-with-data.html#sets">2.3. Sets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/working-with-data.html#strings">2.4. Strings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/working-with-data.html#working-with-files">2.5. Working With Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/working-with-data.html#list-comprehensions">2.6. List Comprehensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/working-with-data.html#dictionaries">2.7. Dictionaries</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">3. Modules</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/modules.html#standard-library">3.1. Standard Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/modules.html#installing-third-party-modules">3.2. Installing third-party modules</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="http://anandology.com/python-practice-book/object_oriented_programming.html">4. Object Oriented Programming</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/object_oriented_programming.html#state">4.1. State</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/object_oriented_programming.html#classes-and-objects">4.2. Classes and Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/object_oriented_programming.html#inheritance">4.3. Inheritance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/object_oriented_programming.html#special-class-methods">4.4. Special Class Methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/object_oriented_programming.html#errors-and-exceptions">4.5. Errors and Exceptions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="http://anandology.com/python-practice-book/iterators.html">5. Iterators &amp; Generators</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/iterators.html#iterators">5.1. Iterators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/iterators.html#generators">5.2. Generators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/iterators.html#generator-expressions">5.3. Generator Expressions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/iterators.html#itertools">5.4. Itertools</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="http://anandology.com/python-practice-book/functional-programming.html">6. Functional Programming</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/functional-programming.html#recursion">6.1. Recursion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/functional-programming.html#higher-order-functions-decorators">6.2. Higher Order Functions &amp; Decorators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://anandology.com/python-practice-book/functional-programming.html#exec-eval">6.3. exec &amp; eval</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="http://anandology.com/python-practice-book/index.html">Python Practice Book</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="http://anandology.com/python-practice-book/index.html">Docs</a> »</li>
+      
+    <li>3. Modules</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="http://anandology.com/python-practice-book/_sources/modules.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr>
+</div>
+          <div role="main">
+            
+  <div class="section" id="modules">
+<h1>3. Modules<a class="headerlink" href="http://anandology.com/python-practice-book/modules.html#modules" title="Permalink to this headline">¶</a></h1>
+<p>Modules are reusable libraries of code in Python. Python comes with many standard library modules.</p>
+<p>A module is imported using the <cite>import</cite> statement.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">time</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span> <span class="n">time</span><span class="o">.</span><span class="n">asctime</span><span class="p">()</span>
+<span class="go">'Fri Mar 30 12:59:21 2012'</span>
+</pre></div>
+</div>
+<p>In this example, we’ve imported the <cite>time</cite> module and called the <cite>asctime</cite>
+function from that module, which returns current time as a string.</p>
+<p>There is also another way to use the import statement.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">time</span> <span class="kn">import</span> <span class="n">asctime</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">asctime</span><span class="p">()</span>
+<span class="go">'Fri Mar 30 13:01:37 2012'</span>
+</pre></div>
+</div>
+<p>Here were imported just the <cite>asctime</cite> function from the <cite>time</cite> module.</p>
+<p>The <cite>pydoc</cite> command provides help on any module or a function.</p>
+<div class="highlight-text"><div class="highlight"><pre>$ pydoc time
+Help on module time:
+
+NAME
+    time - This module provides various functions to manipulate time values.
+...
+
+$ pydoc time.asctime
+Help on built-in function asctime in time:
+
+time.asctime = asctime(...)
+    asctime([tuple]) -&gt; string
+...
+</pre></div>
+</div>
+<p>On Windows, the <cite>pydoc</cite> command is not available. The work-around is to use, the built-in <cite>help</cite> function.</p>
+<div class="highlight-text"><div class="highlight"><pre>&gt;&gt;&gt; help('time')
+Help on module time:
+
+NAME
+    time - This module provides various functions to manipulate time values.
+...
+</pre></div>
+</div>
+<p>Writing our own modules is very simple.</p>
+<p>For example, create a file called <cite>num.py</cite> with the following content.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">def</span> <span class="nf">square</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">*</span> <span class="n">x</span>
+
+<span class="k">def</span> <span class="nf">cube</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">*</span> <span class="n">x</span> <span class="o">*</span> <span class="n">x</span>
+</pre></div>
+</div>
+<p>Now open Python interterter:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">num</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">num</span><span class="o">.</span><span class="n">square</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="go">9</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">num</span><span class="o">.</span><span class="n">cube</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="go">27</span>
+</pre></div>
+</div>
+<p>Thats all we’ve written a python library.</p>
+<p>Try <cite>pydoc num</cite> (<cite>pydoc.bat numbers</cite> on Windows) to see documentation for this numbers modules. It won’t have any documentation as we haven’t providied anything yet.</p>
+<p>In Python, it is possible to associate documentation for each module, function using docstrings. Docstrings are strings written at the top of the module or at the beginning of a function.</p>
+<p>Lets try to document our <cite>num</cite> module by changing the contents of <cite>num.py</cite></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="sd">"""The num module provides utilties to work on numbers.</span>
+
+<span class="sd">Current it provides square and cube.</span>
+<span class="sd">"""</span>
+
+<span class="k">def</span> <span class="nf">square</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="sd">"""Computes square of a number."""</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">*</span> <span class="n">x</span>
+
+<span class="k">def</span> <span class="nf">cube</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="sd">"""Computes cube of a number."""</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">*</span> <span class="n">x</span>
+</pre></div>
+</div>
+<p>The pydoc command will now show us the doumentation nicely formatted.</p>
+<div class="highlight-text"><div class="highlight"><pre>Help on module num:
+
+NAME
+    num - The num module provides utilties to work on numbers.
+
+FILE
+    /Users/anand/num.py
+
+DESCRIPTION
+    Current it provides square and cube.
+
+FUNCTIONS
+    cube(x)
+        Computes cube of a number.
+
+    square(x)
+        Computes square of a number.
+</pre></div>
+</div>
+<p>Under the hood, python stores the documentation as a special field called <cite>__doc__</cite>.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">os</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span> <span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="o">.</span><span class="n">__doc__</span>
+<span class="go">getcwd() -&gt; path</span>
+
+<span class="go">Return a string representing the current working directory.</span>
+</pre></div>
+</div>
+<div class="section" id="standard-library">
+<h2>3.1. Standard Library<a class="headerlink" href="http://anandology.com/python-practice-book/modules.html#standard-library" title="Permalink to this headline">¶</a></h2>
+<p>Python comes with many standard library modules. Lets look at some of the most commonly used ones.</p>
+<div class="section" id="os-module">
+<h3>3.1.1. os module<a class="headerlink" href="http://anandology.com/python-practice-book/modules.html#os-module" title="Permalink to this headline">¶</a></h3>
+<p>The <cite>os</cite> and <cite>os.path</cite> modules provides functionality to work with files, directories etc.</p>
+<p><strong>Problem 1: </strong>Write a program to list all files in the given directory.</p>
+<p><strong>Problem 2: </strong>Write a program <cite>extcount.py</cite> to count number of files for each
+extension in the given directory. The program should take a directory name
+ as argument and print count and extension for each available file extension.</p>
+<div class="highlight-text"><div class="highlight"><pre>$ python extcount.py src/
+14 py
+4 txt
+1 csv
+</pre></div>
+</div>
+<p><strong>Problem 3: </strong>Write a program to list all the files in the given directory along
+with their length and last modification time. The output should contain one
+line for each file containing filename, length and modification date separated
+by tabs.</p><p>Hint: see help for <tt class="docutils literal"><span class="pre">os.stat</span></tt>.</p>
+<p></p>
+<p><strong>Problem 4: </strong>Write a program to print directory tree. The program should take
+path of a directory as argument and print all the files in it recursively as
+a tree.</p>
+<div class="highlight-text"><div class="highlight"><pre>$ python dirtree.py foo
+foo
+|-- a.txt
+|-- b.txt
+|-- code
+|   |-- a.py
+|   |-- b.py
+|   |-- docs
+|   |   |-- a.txt
+|   |   \-- b.txt
+|   \-- x.py
+\-- z.txt
+</pre></div>
+</div>
+</div>
+<div class="section" id="urllib-module">
+<h3>3.1.2. urllib module<a class="headerlink" href="http://anandology.com/python-practice-book/modules.html#urllib-module" title="Permalink to this headline">¶</a></h3>
+<p>The <cite>urllib</cite> module provides functionality to download webpages.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">urllib</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">response</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="s">"http://python.org/"</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span> <span class="n">response</span><span class="o">.</span><span class="n">headers</span>
+<span class="go">Date: Fri, 30 Mar 2012 09:24:55 GMT</span>
+<span class="go">Server: Apache/2.2.16 (Debian)</span>
+<span class="go">Last-Modified: Fri, 30 Mar 2012 08:42:25 GMT</span>
+<span class="go">ETag: "105800d-4b7b-4bc71d1db9e40"</span>
+<span class="go">Accept-Ranges: bytes</span>
+<span class="go">Content-Length: 19323</span>
+<span class="go">Connection: close</span>
+<span class="go">Content-Type: text/html</span>
+<span class="go">X-Pad: avoid browser bug</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">response</span><span class="o">.</span><span class="n">header</span><span class="p">[</span><span class="s">'Content-Type'</span><span class="p">]</span>
+<span class="go">'text/html'</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">content</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><strong>Problem 5: </strong>Write a program wget.py to download a given URL. The program should accept a URL as argument, download it and save it with the basename of the URL. If the URL ends with a /, consider the basename as index.html.</p>
+<div class="highlight-text"><div class="highlight"><pre>$ python wget.py http://docs.python.org/tutorial/interpreter.html
+saving http://docs.python.org/tutorial/interpreter.html as interpreter.html.
+
+$ python wget.py http://docs.python.org/tutorial/
+saving http://docs.python.org/tutorial/ as index.html.
+</pre></div>
+</div>
+</div>
+<div class="section" id="re-module">
+<h3>3.1.3. re module<a class="headerlink" href="http://anandology.com/python-practice-book/modules.html#re-module" title="Permalink to this headline">¶</a></h3>
+<p><strong>Problem 6: </strong>Write a program antihtml.py that takes a URL as argument, downloads the html from web and print it after stripping html tags.</p>
+<div class="highlight-text"><div class="highlight"><pre>$ python antihtml.py index.html
+...
+The Python interpreter is usually installed as /usr/local/bin/python on
+those machines where it is available; putting /usr/local/bin in your
+...
+</pre></div>
+</div>
+<p><strong>Problem 7: </strong>Write a function <cite>make_slug</cite> that takes a name converts it into a slug. A slug is a string where spaces and special characters are replaced by a hyphen, typically used to create blog post URL from post title. It should also make sure there are no more than one hyphen in any place and there are no hyphens at the biginning and end of the slug.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">make_slug</span><span class="p">(</span><span class="s">"hello world"</span><span class="p">)</span>
+<span class="go">'hello-world'</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">make_slug</span><span class="p">(</span><span class="s">"hello  world!"</span><span class="p">)</span>
+<span class="go">'hello-world'</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">make_slug</span><span class="p">(</span><span class="s">" --hello-  world--"</span><span class="p">)</span>
+<span class="go">'hello-world'</span>
+</pre></div>
+</div>
+<p><strong>Problem 8: </strong>Write a program <cite>links.py</cite> that takes URL of a webpage as argument
+and prints all the URLs linked from that webpage.</p>
+<p><strong>Problem 9: </strong>Write a regular expression to validate a phone number.</p>
+</div>
+<div class="section" id="json-module">
+<h3>3.1.4. json module<a class="headerlink" href="http://anandology.com/python-practice-book/modules.html#json-module" title="Permalink to this headline">¶</a></h3>
+<p><strong>Problem 10: </strong>Write a program myip.py to print the external IP address of the
+machine. Use the response from <tt class="docutils literal"><span class="pre">http://httpbin.org/get</span></tt> and read the IP
+address from there. The program should print only the IP address and nothing
+else.</p>
+</div>
+<div class="section" id="zipfile-module">
+<h3>3.1.5. zipfile module<a class="headerlink" href="http://anandology.com/python-practice-book/modules.html#zipfile-module" title="Permalink to this headline">¶</a></h3>
+<p>The <cite>zipfile</cite> module provides interface to read and write zip files.</p>
+<p>Here are some examples to demonstate the power of zipfile module.</p>
+<p>The following example prints names of all the files in a zip archive.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">zipfile</span>
+<span class="n">z</span> <span class="o">=</span> <span class="n">zipfile</span><span class="o">.</span><span class="n">ZipFile</span><span class="p">(</span><span class="s">"a.zip"</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">z</span><span class="o">.</span><span class="n">namelist</span><span class="p">():</span>
+    <span class="k">print</span> <span class="n">name</span>
+</pre></div>
+</div>
+<p>The following example prints each file in the zip archive.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">zipfile</span>
+<span class="n">z</span> <span class="o">=</span> <span class="n">zipfile</span><span class="o">.</span><span class="n">ZipFile</span><span class="p">(</span><span class="s">"a.zip"</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">z</span><span class="o">.</span><span class="n">namelist</span><span class="p">():</span>
+    <span class="k">print</span>
+    <span class="k">print</span> <span class="s">"FILE:"</span><span class="p">,</span> <span class="n">name</span>
+    <span class="k">print</span>
+    <span class="k">print</span> <span class="n">z</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Problem 11: </strong>Write a python program <cite>zip.py</cite> to create a zip file. The program should take name of zip file as first argument and files to add as rest of the arguments.</p>
+<div class="highlight-text"><div class="highlight"><pre>$ python zip.py foo.zip file1.txt file2.txt
+</pre></div>
+</div>
+<p><strong>Problem 12: </strong>Write a program <cite>mydoc.py</cite> to implement the functionality of pydoc. The program should take the module name as argument and print documentation for the module and each of the functions defined in that module.</p>
+<div class="highlight-text"><div class="highlight"><pre>$ python mydoc.py os
+Help on module os:
+
+DESCRIPTION
+
+os - OS routines for Mac, NT, or Posix depending on what system we're on.
+...
+
+FUNCTIONS
+
+getcwd()
+    ...
+</pre></div>
+</div>
+<dl class="docutils">
+<dt>Hints:</dt>
+<dd><ul class="first last simple">
+<li>The <cite>dir</cite> function to get all entries of a module</li>
+<li>The <cite>inspect.isfunction</cite> function can be used to test if given object is a function</li>
+<li><cite>x.__doc__</cite> gives the docstring for x.</li>
+<li>The <cite>__import__</cite> function can be used to import a module by name</li>
+</ul>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="installing-third-party-modules">
+<h2>3.2. Installing third-party modules<a class="headerlink" href="http://anandology.com/python-practice-book/modules.html#installing-third-party-modules" title="Permalink to this headline">¶</a></h2>
+<p>PyPI, The Python Package Index maintains the list of Python packages available. The third-party module developers usually register at PyPI and uploads their packages there.</p>
+<p>The standard way to installing a python module is using <cite>pip</cite> or <cite>easy_install</cite>. Pip is more modern and perferred.</p>
+<p>Lets start with installing <cite>easy_install</cite>.</p>
+<ul class="simple">
+<li>Download the easy_install install script <a class="reference external" href="http://peak.telecommunity.com/dist/ez_setup.py">ez_setup.py</a>.</li>
+<li>Run it using Python.</li>
+</ul>
+<p>That will install <tt class="docutils literal"><span class="pre">easy_install</span></tt>, the script used to install third-party python packages.</p>
+<p>Before installing new packages, lets understand how to manage virtual environments for installing python packages.</p>
+<p>Earlier the only way of installing python packages was system wide. When used this way, packages installed for one project can conflict with other and create trouble. So people invented a way to create isolated Python environment to install packages. This tool is called <a class="reference external" href="http://www.virtualenv.org/">virtualenv</a>.</p>
+<p>To install <tt class="docutils literal"><span class="pre">virtualenv</span></tt>:</p>
+<blockquote>
+<div>$ easy_install virtualenv</div></blockquote>
+<p>Installing virtualenv also installs the <cite>pip</cite> command, a better replace for <cite>easy_install</cite>.</p>
+<p>Once it is installed, create a new virtual env by running the <tt class="docutils literal"><span class="pre">virtualenv</span></tt> command.</p>
+<div class="highlight-text"><div class="highlight"><pre>$ virtualenv testenv
+</pre></div>
+</div>
+<p>Now to switch to that env.</p>
+<p>On UNIX/Mac OS X:</p>
+<div class="highlight-text"><div class="highlight"><pre>$ source testenv/bin/activate
+</pre></div>
+</div>
+<p>On Windows:</p>
+<div class="highlight-text"><div class="highlight"><pre>&gt; testenv\Scripts\activate
+</pre></div>
+</div>
+<p>Now the virtualenv <cite>testenv</cite> is activated.</p>
+<p>Now all the packages installed will be limited to this virtualenv. Lets try to install a third-party package.</p>
+<div class="highlight-text"><div class="highlight"><pre>$ pip install tablib
+</pre></div>
+</div>
+<p>This installs a third-party library called <tt class="docutils literal"><span class="pre">tablib</span></tt>.</p>
+<p>The <tt class="docutils literal"><span class="pre">tablib</span></tt> library is a small little library to work with tabular data and write csv and Excel files.</p>
+<p>Here is a simple example.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="c"># create a dataset</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">tablib</span><span class="o">.</span><span class="n">Dataset</span><span class="p">()</span>
+
+<span class="c"># Add rows</span>
+<span class="n">data</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="s">"A"</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+<span class="n">data</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="s">"B"</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+<span class="n">data</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="s">"C"</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+
+<span class="c"># save as csv</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s">'test.csv'</span><span class="p">,</span> <span class="s">'wb'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">csv</span><span class="p">)</span>
+
+<span class="c"># save as Excel</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s">'test.xls'</span><span class="p">,</span> <span class="s">'wb'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">xls</span><span class="p">)</span>
+
+<span class="c"># save as Excel 07+</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s">'test.xlsx'</span><span class="p">,</span> <span class="s">'wb'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">xlsx</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>It is even possible to create multi-sheet excel files.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">sheet1</span> <span class="o">=</span> <span class="n">tablib</span><span class="o">.</span><span class="n">Dataset</span><span class="p">()</span>
+<span class="n">sheet1</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="s">"A1"</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+<span class="n">sheet1</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="s">"A2"</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+
+<span class="n">sheet2</span> <span class="o">=</span> <span class="n">tablib</span><span class="o">.</span><span class="n">Dataset</span><span class="p">()</span>
+<span class="n">sheet2</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="s">"B1"</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+<span class="n">sheet2</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="s">"B2"</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+
+
+<span class="n">book</span> <span class="o">=</span> <span class="n">tablib</span><span class="o">.</span><span class="n">Databook</span><span class="p">([</span><span class="n">data1</span><span class="p">,</span> <span class="n">data2</span><span class="p">])</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s">'book.xlsx'</span><span class="p">,</span> <span class="s">'wb'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">book</span><span class="o">.</span><span class="n">xlsx</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Problem 13: </strong>Write a program <tt class="docutils literal"><span class="pre">csv2xls.py</span></tt> that reads a csv file and exports
+it as Excel file. The prigram should take two arguments. The name of the csv
+file to read as first argument and the name of the Excel file to write as the
+second argument.</p>
+<p><strong>Problem 14: </strong>Create a new virtualenv and install BeautifulSoup. BeautifulSoup
+is very good library for parsing HTML. Try using it to extract all HTML
+links from a webpage.</p>
+<p>Read the <a class="reference external" href="http://www.crummy.com/software/BeautifulSoup/bs3/documentation.html">BeautifulSoup documentation</a> to get started.</p>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="http://anandology.com/python-practice-book/object_oriented_programming.html" class="btn btn-neutral float-right" title="4. Object Oriented Programming">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="http://anandology.com/python-practice-book/working-with-data.html" class="btn btn-neutral" title="2. Working with Data"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr>
+
+  <div role="contentinfo">
+    <p>
+        © Copyright 2014, <a href="http://anandology.com/">Anand Chitipothu</a>.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org/">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'2014-08-10',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="./3. Modules — Python Practice Book_files/jquery.js"></script>
+      <script type="text/javascript" src="./3. Modules — Python Practice Book_files/underscore.js"></script>
+      <script type="text/javascript" src="./3. Modules — Python Practice Book_files/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="./3. Modules — Python Practice Book_files/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+
+<script src="./3. Modules — Python Practice Book_files/js" type="text/javascript"></script>
+<script type="text/javascript">try{ clicky.init(66579110); }catch(e){}</script>
+<noscript>&lt;p&gt;&lt;img alt="Clicky" width="1" height="1" src="//in.getclicky.com/66579110ns.gif" /&gt;&lt;/p&gt;</noscript>
+
+
+
+
+</body></html>
+
